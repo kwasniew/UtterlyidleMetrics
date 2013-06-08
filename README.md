@@ -16,6 +16,7 @@ Usage
 --------
 
 Add UtterlyidleMetrics jar and metrics-core to your project
+
 `application.add(new MetricsModule());`
 
 
