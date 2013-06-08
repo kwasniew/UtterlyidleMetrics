@@ -1,4 +1,4 @@
-<project name="EscenicToDrMobileConverterWeb" default="build">
+<project name="UtterlyidleMetrics" default="build">
     <property name="macros" value="${basedir}/macros"/>
 
     <import file="${macros}/build.xml"/>
