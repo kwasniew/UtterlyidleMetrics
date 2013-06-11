@@ -1,4 +1,4 @@
-package com.utterlyidle.metrics;
+package com.utterlyidle.metrics.threadDump;
 
 import com.codahale.metrics.jvm.ThreadDump;
 import com.googlecode.totallylazy.Callable1;

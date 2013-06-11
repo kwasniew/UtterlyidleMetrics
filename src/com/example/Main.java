@@ -17,6 +17,6 @@ public class Main extends RestApplication {
         if(args.length > 0) {
             port = Integer.parseInt(args[0]);
         }
-        application().addAnnotated(MainResource.class).add(new MetricsModule()).start(port);
+        application().add(new MetricsModule()).start(port);
     }
 }

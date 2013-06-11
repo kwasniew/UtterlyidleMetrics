@@ -1,4 +1,4 @@
-package com.utterlyidle.metrics;
+package com.utterlyidle.metrics.core;
 
 import com.codahale.metrics.Timer;
 import com.googlecode.utterlyidle.HttpHandler;

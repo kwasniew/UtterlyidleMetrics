@@ -1,7 +1,8 @@
-package com.utterlyidle.metrics;
+package com.utterlyidle.metrics.core;
 
 import com.codahale.metrics.Counter;
 import com.codahale.metrics.MetricRegistry;
+import com.utterlyidle.metrics.MetricsModule;
 
 import static com.codahale.metrics.MetricRegistry.name;
 

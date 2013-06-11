@@ -1,4 +1,4 @@
-package com.utterlyidle.metrics;
+package com.utterlyidle.metrics.core;
 
 import com.codahale.metrics.Meter;
 import com.codahale.metrics.MetricRegistry;
@@ -6,6 +6,7 @@ import com.googlecode.totallylazy.Callable1;
 import com.googlecode.totallylazy.Callable2;
 import com.googlecode.totallylazy.Pair;
 import com.googlecode.utterlyidle.Status;
+import com.utterlyidle.metrics.MetricsModule;
 
 import java.util.HashMap;
 import java.util.Map;

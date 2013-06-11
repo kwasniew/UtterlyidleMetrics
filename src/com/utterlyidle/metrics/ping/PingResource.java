@@ -1,4 +1,4 @@
-package com.utterlyidle.metrics;
+package com.utterlyidle.metrics.ping;
 
 import com.googlecode.utterlyidle.*;
 import com.googlecode.utterlyidle.annotations.GET;
