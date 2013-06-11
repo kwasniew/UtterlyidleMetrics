@@ -5,7 +5,7 @@ import com.googlecode.utterlyidle.annotations.Path;
 
 public class MainResource {
     @GET
-    @Path("/metrics")
+    @Path("/metricsTest")
     public String hello() {
         return "<h2>UtterlyidleMetrics</h2>";
     }
