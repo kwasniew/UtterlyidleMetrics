@@ -2,7 +2,6 @@ package com.example;
 
 import com.googlecode.utterlyidle.BasePath;
 import com.googlecode.utterlyidle.RestApplication;
-import com.googlecode.utterlyidle.ServerConfiguration;
 import com.utterlyidle.metrics.MetricsModule;
 
 import static com.googlecode.utterlyidle.ApplicationBuilder.application;
