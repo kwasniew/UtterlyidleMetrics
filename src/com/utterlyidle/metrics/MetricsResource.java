@@ -10,16 +10,18 @@ import com.googlecode.utterlyidle.annotations.GET;
 import com.googlecode.utterlyidle.annotations.Path;
 import com.googlecode.utterlyidle.annotations.Produces;
 
+import static com.googlecode.utterlyidle.HttpHeaders.CACHE_CONTROL;
 import static com.googlecode.utterlyidle.MediaType.APPLICATION_JSON;
+import static com.googlecode.utterlyidle.Status.OK;
 
 public class MetricsResource {
 
     private MetricRegistry metricRegistry;
     private ObjectMapper objectMapper;
 
-    public MetricsResource(MetricRegistry metricRegistry, ObjectMapper objectMapper) {
+    public MetricsResource(MetricRegistry metricRegistry, MetricsObjectMapper metricsObjectMapper) {
         this.metricRegistry = metricRegistry;
-        this.objectMapper = objectMapper;
+        this.objectMapper = metricsObjectMapper.mapper();
     }
 
     @GET
@@ -27,6 +29,6 @@ public class MetricsResource {
     @Produces(APPLICATION_JSON)
     public Response metrics() throws Exception {
         String metrics = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(metricRegistry);
-        return ResponseBuilder.response(Status.OK).header(HttpHeaders.CACHE_CONTROL, "must-revalidate,no-cache,no-store").entity(metrics).build();
+        return ResponseBuilder.response(OK).header(CACHE_CONTROL, "must-revalidate,no-cache,no-store").entity(metrics).build();
     }
 }

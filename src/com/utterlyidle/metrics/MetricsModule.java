@@ -1,6 +1,8 @@
 package com.utterlyidle.metrics;
 
 import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.health.HealthCheckRegistry;
+import com.codahale.metrics.health.jvm.ThreadDeadlockHealthCheck;
 import com.codahale.metrics.jvm.ThreadDump;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.googlecode.utterlyidle.HttpHandler;
@@ -31,8 +33,11 @@ public class MetricsModule implements ApplicationScopedModule, RequestScopedModu
         container.add(StatusCodeMeters.class);
 
         container.addInstance(ThreadDump.class, new ThreadDump(ManagementFactory.getThreadMXBean()));
-        container.addInstance(ObjectMapper.class, new ObjectMapper().registerModule(new com.codahale.metrics.json.MetricsModule(TimeUnit.SECONDS, TimeUnit.SECONDS, true)));
+        container.add(MetricsObjectMapper.class);
 
+        container.add(HealthCheckRegistry.class);
+        container.add(HealthCheckObjectMapper.class);
+        container.get(HealthCheckRegistry.class).register("threadDeadlock", new ThreadDeadlockHealthCheck());
 
         return container;
     }
@@ -48,6 +53,7 @@ public class MetricsModule implements ApplicationScopedModule, RequestScopedModu
         bindings.add(annotatedClass(PingResource.class));
         bindings.add(annotatedClass(ThreadDumpResource.class));
         bindings.add(annotatedClass(MetricsResource.class));
+        bindings.add(annotatedClass(HealthCheckResource.class));
         return bindings;
     }
 }
