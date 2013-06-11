@@ -21,7 +21,7 @@ public class ThreadDumpResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    @Path("threadDump")
+    @Path("threads")
     public Response threadDump() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         threadDump.dump(outputStream);

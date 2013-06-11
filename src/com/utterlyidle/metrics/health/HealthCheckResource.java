@@ -31,7 +31,7 @@ public class HealthCheckResource {
     }
 
     @GET
-    @Path("healthCheck")
+    @Path("healthcheck")
     @Produces(APPLICATION_JSON)
     public Response healthCheck() throws JsonProcessingException {
         SortedMap<String,HealthCheck.Result> results = healthCheckRegistry.runHealthChecks();
