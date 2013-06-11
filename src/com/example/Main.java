@@ -2,9 +2,11 @@ package com.example;
 
 import com.googlecode.utterlyidle.BasePath;
 import com.googlecode.utterlyidle.RestApplication;
+import com.googlecode.utterlyidle.ServerConfiguration;
 import com.utterlyidle.metrics.MetricsModule;
 
 import static com.googlecode.utterlyidle.ApplicationBuilder.application;
+import static com.googlecode.utterlyidle.ServerConfiguration.defaultConfiguration;
 
 public class Main extends RestApplication {
     public Main(BasePath basePath) {
@@ -17,6 +19,6 @@ public class Main extends RestApplication {
         if(args.length > 0) {
             port = Integer.parseInt(args[0]);
         }
-        application().add(new MetricsModule()).start(port);
+        application().add(new MetricsModule()).start(defaultConfiguration().port(port));
     }
 }

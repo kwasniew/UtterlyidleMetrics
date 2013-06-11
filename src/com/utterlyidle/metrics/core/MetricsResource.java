@@ -12,6 +12,7 @@ import static com.googlecode.utterlyidle.HttpHeaders.CACHE_CONTROL;
 import static com.googlecode.utterlyidle.MediaType.APPLICATION_JSON;
 import static com.googlecode.utterlyidle.Status.OK;
 
+@Path("metrics")
 public class MetricsResource {
 
     private MetricRegistry metricRegistry;

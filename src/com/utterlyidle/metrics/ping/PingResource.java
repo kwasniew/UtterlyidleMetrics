@@ -5,6 +5,7 @@ import com.googlecode.utterlyidle.annotations.GET;
 import com.googlecode.utterlyidle.annotations.Path;
 import com.googlecode.utterlyidle.annotations.Produces;
 
+@Path("metrics")
 public class PingResource {
 
     @GET

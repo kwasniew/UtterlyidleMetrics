@@ -53,6 +53,7 @@ public class MetricsModule implements ApplicationScopedModule, RequestScopedModu
         bindings.add(annotatedClass(ThreadDumpResource.class));
         bindings.add(annotatedClass(MetricsResource.class));
         bindings.add(annotatedClass(HealthCheckResource.class));
+        bindings.add(annotatedClass(AdminResource.class));
         return bindings;
     }
 }

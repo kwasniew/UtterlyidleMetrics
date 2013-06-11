@@ -20,6 +20,7 @@ import static com.googlecode.utterlyidle.HttpHeaders.CACHE_CONTROL;
 import static com.googlecode.utterlyidle.MediaType.APPLICATION_JSON;
 import static com.googlecode.utterlyidle.Status.*;
 
+@Path("metrics")
 public class HealthCheckResource {
 
     private ObjectMapper objectMapper;

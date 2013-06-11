@@ -11,6 +11,7 @@ import com.googlecode.utterlyidle.annotations.Produces;
 
 import java.io.ByteArrayOutputStream;
 
+@Path("metrics")
 public class ThreadDumpResource {
 
     private ThreadDump threadDump;
