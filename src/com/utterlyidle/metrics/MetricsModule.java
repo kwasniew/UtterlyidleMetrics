@@ -2,17 +2,21 @@ package com.utterlyidle.metrics;
 
 import com.codahale.metrics.MetricRegistry;
 import com.googlecode.utterlyidle.HttpHandler;
+import com.googlecode.utterlyidle.Resources;
 import com.googlecode.utterlyidle.modules.ApplicationScopedModule;
 import com.googlecode.utterlyidle.modules.RequestScopedModule;
+import com.googlecode.utterlyidle.modules.ResourcesModule;
 import com.googlecode.yadic.Container;
 
 import static com.googlecode.utterlyidle.Status.*;
+import static com.googlecode.utterlyidle.annotations.AnnotatedBindings.annotatedClass;
 
 /**
  * This is the Utterlyidle port of: https://github.com/codahale/metrics/tree/master/metrics-servlet
  */
 
-public class MetricsModule implements ApplicationScopedModule, RequestScopedModule {
+public class MetricsModule implements ApplicationScopedModule, RequestScopedModule, ResourcesModule
+{
     @Override
     public Container addPerApplicationObjects(Container container) throws Exception {
         container.add(MetricRegistry.class);
@@ -27,5 +31,11 @@ public class MetricsModule implements ApplicationScopedModule, RequestScopedModu
     public Container addPerRequestObjects(Container container) throws Exception {
         container.decorate(HttpHandler.class, MetricsHttpHandler.class);
         return container;
+    }
+
+    @Override
+    public Resources addResources(Resources bindings) throws Exception {
+        bindings.add(annotatedClass(PingResource.class));
+        return bindings;
     }
 }
