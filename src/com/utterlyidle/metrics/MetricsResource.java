@@ -1,15 +1,14 @@
 package com.utterlyidle.metrics;
 
 import com.codahale.metrics.MetricRegistry;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.googlecode.utterlyidle.*;
+import com.googlecode.utterlyidle.HttpHeaders;
+import com.googlecode.utterlyidle.Response;
+import com.googlecode.utterlyidle.ResponseBuilder;
+import com.googlecode.utterlyidle.Status;
 import com.googlecode.utterlyidle.annotations.GET;
 import com.googlecode.utterlyidle.annotations.Path;
 import com.googlecode.utterlyidle.annotations.Produces;
-
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 import static com.googlecode.utterlyidle.MediaType.APPLICATION_JSON;
 
