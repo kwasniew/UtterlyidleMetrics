@@ -1,12 +1,15 @@
 package com.utterlyidle.metrics;
 
 import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.jvm.ThreadDump;
 import com.googlecode.utterlyidle.HttpHandler;
 import com.googlecode.utterlyidle.Resources;
 import com.googlecode.utterlyidle.modules.ApplicationScopedModule;
 import com.googlecode.utterlyidle.modules.RequestScopedModule;
 import com.googlecode.utterlyidle.modules.ResourcesModule;
 import com.googlecode.yadic.Container;
+
+import java.lang.management.ManagementFactory;
 
 import static com.googlecode.utterlyidle.Status.*;
 import static com.googlecode.utterlyidle.annotations.AnnotatedBindings.annotatedClass;
@@ -24,6 +27,7 @@ public class MetricsModule implements ApplicationScopedModule, RequestScopedModu
         container.add(ActiveRequestsCounter.class);
         container.addInstance(StatusCodes.class, StatusCodes.codes(OK, CREATED, NO_CONTENT, SEE_OTHER, NOT_FOUND, BAD_REQUEST, INTERNAL_SERVER_ERROR));
         container.add(StatusCodeMeters.class);
+        container.addInstance(ThreadDump.class, new ThreadDump(ManagementFactory.getThreadMXBean()));
         return container;
     }
 
@@ -36,6 +40,7 @@ public class MetricsModule implements ApplicationScopedModule, RequestScopedModu
     @Override
     public Resources addResources(Resources bindings) throws Exception {
         bindings.add(annotatedClass(PingResource.class));
+        bindings.add(annotatedClass(ThreadDumpResource.class));
         return bindings;
     }
 }
