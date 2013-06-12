@@ -37,6 +37,6 @@ public class MetricsHttpHandler implements HttpHandler {
     }
 
     private void markMeterForStatusCode(int statusCode) {
-        this.statusCodeMeters.get(statusCode).mark();
+        statusCodeMeters.get(statusCode).mark();
     }
 }
