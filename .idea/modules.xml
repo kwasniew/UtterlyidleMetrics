@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UtterlyidleMetrics.iml" filepath="$PROJECT_DIR$/UtterlyidleMetrics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utterlyidle-metrics.iml" filepath="$PROJECT_DIR$/utterlyidle-metrics.iml" />
     </modules>
   </component>
 </project>

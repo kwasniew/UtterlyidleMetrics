@@ -7,7 +7,6 @@ out
 
 # Intellij Files #
 *.iws
-.idea/workspace.xml
 .DS_Store
 
 # Lib Files #
