@@ -3,6 +3,7 @@ package com.utterlyidle.metrics.jvm;
 import com.codahale.metrics.Metric;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.MetricSet;
+import com.codahale.metrics.jvm.FileDescriptorRatioGauge;
 import com.codahale.metrics.jvm.GarbageCollectorMetricSet;
 import com.codahale.metrics.jvm.MemoryUsageGaugeSet;
 import com.codahale.metrics.jvm.ThreadStatesGaugeSet;
@@ -19,9 +20,12 @@ public class JvmModule implements ApplicationScopedModule {
         container.add(GarbageCollectorMetricSet.class);
         container.add(MemoryUsageGaugeSet.class);
         container.add(ThreadStatesGaugeSet.class);
-        registerMetrics(container.get(MetricRegistry.class), container.get(GarbageCollectorMetricSet.class));
-        registerMetrics(container.get(MetricRegistry.class), container.get(MemoryUsageGaugeSet.class));
-        registerMetrics(container.get(MetricRegistry.class), container.get(ThreadStatesGaugeSet.class));
+        container.add(FileDescriptorRatioGauge.class);
+        MetricRegistry metricRegistry = container.get(MetricRegistry.class);
+        metricRegistry.register("openToTotalFileDescriptorsRatio", container.get(FileDescriptorRatioGauge.class));
+        registerMetrics(metricRegistry, container.get(GarbageCollectorMetricSet.class));
+        registerMetrics(metricRegistry, container.get(MemoryUsageGaugeSet.class));
+        registerMetrics(metricRegistry, container.get(ThreadStatesGaugeSet.class));
         return container;
     }
 
