@@ -7,9 +7,10 @@ import com.googlecode.utterlyidle.annotations.Produces;
 
 @Path("metrics")
 public class PingResource {
+    public static final String NAME = "ping";
 
     @GET
-    @Path("ping")
+    @Path(NAME)
     @Produces(MediaType.TEXT_PLAIN)
     public Response ping() {
         return ResponseBuilder.response(Status.OK).header(HttpHeaders.CACHE_CONTROL, "must-revalidate,no-cache,no-store").entity("pong").build();

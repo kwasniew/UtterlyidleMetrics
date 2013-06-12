@@ -23,6 +23,7 @@ import static com.googlecode.utterlyidle.Status.*;
 @Path("metrics")
 public class HealthCheckResource {
 
+    public static final String NAME = "healthcheck";
     private ObjectMapper objectMapper;
     private HealthCheckRegistry healthCheckRegistry;
 
@@ -32,7 +33,7 @@ public class HealthCheckResource {
     }
 
     @GET
-    @Path("healthcheck")
+    @Path(NAME)
     @Produces(APPLICATION_JSON)
     public Response healthCheck() throws JsonProcessingException {
         SortedMap<String,HealthCheck.Result> results = healthCheckRegistry.runHealthChecks();

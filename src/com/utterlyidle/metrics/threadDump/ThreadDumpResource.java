@@ -13,7 +13,7 @@ import java.io.ByteArrayOutputStream;
 
 @Path("metrics")
 public class ThreadDumpResource {
-
+    public static final String NAME = "threads";
     private ThreadDump threadDump;
 
     public ThreadDumpResource(ThreadDump threadDump) {
@@ -22,7 +22,7 @@ public class ThreadDumpResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    @Path("threads")
+    @Path(NAME)
     public Response threadDump() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         threadDump.dump(outputStream);

@@ -1,6 +1,6 @@
 package com.utterlyidle.metrics;
 
-import com.googlecode.utterlyidle.Redirector;
+import com.googlecode.utterlyidle.BasePath;
 import com.googlecode.utterlyidle.Response;
 import com.googlecode.utterlyidle.ResponseBuilder;
 import com.googlecode.utterlyidle.annotations.GET;
@@ -11,8 +11,6 @@ import com.utterlyidle.metrics.health.HealthCheckResource;
 import com.utterlyidle.metrics.ping.PingResource;
 import com.utterlyidle.metrics.threadDump.ThreadDumpResource;
 
-import static com.googlecode.totallylazy.proxy.Call.method;
-import static com.googlecode.totallylazy.proxy.Call.on;
 import static com.googlecode.utterlyidle.HttpHeaders.CACHE_CONTROL;
 import static com.googlecode.utterlyidle.MediaType.TEXT_HTML;
 import static com.googlecode.utterlyidle.Status.OK;
@@ -36,27 +34,26 @@ public class AdminResource {
                     "  </ul>%n" +
                     "</body>%n" +
                     "</html>");
-    private Redirector redirector;
+    private BasePath basePath;
 
 
-    public AdminResource(Redirector redirector) {
-        this.redirector = redirector;
+    public AdminResource(BasePath basePath) {
+        this.basePath = basePath;
     }
 
     @GET
     @Path("admin")
     @Produces(TEXT_HTML)
     public Response admin() throws Exception {
-        String metricsUri = redirector.absoluteUriOf(method(on(MetricsResource.class).metrics())).toString();
-        String pingUri = redirector.absoluteUriOf(method(on(PingResource.class).ping())).toString();
-        String threadsUri = redirector.absoluteUriOf(method(on(ThreadDumpResource.class).threadDump())).toString();
-        String healthCheckUri = redirector.absoluteUriOf(method(on(HealthCheckResource.class).healthCheck())).toString();
-
-        String content = TEMPLATE.replace("${METRICS}", metricsUri).
-                                  replace("${PING}", pingUri).
-                                  replace("${THREADS}", threadsUri).
-                                  replace("${HEALTHCHECK}", healthCheckUri);
+        String content = TEMPLATE.replace("${METRICS}", uri(MetricsResource.NAME)).
+                                  replace("${PING}", uri(PingResource.NAME)).
+                                  replace("${THREADS}", uri(ThreadDumpResource.NAME)).
+                                  replace("${HEALTHCHECK}", uri(HealthCheckResource.NAME));
 
         return ResponseBuilder.response(OK).header(CACHE_CONTROL, "must-revalidate,no-cache,no-store").entity(content).build();
+    }
+
+    private String uri(String lastSegment) {
+        return String.format("%s%s/%s", basePath.toString(), "metrics", lastSegment);
     }
 }

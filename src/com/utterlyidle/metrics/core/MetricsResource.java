@@ -14,7 +14,7 @@ import static com.googlecode.utterlyidle.Status.OK;
 
 @Path("metrics")
 public class MetricsResource {
-
+    public static final String NAME = "metrics";
     private MetricRegistry metricRegistry;
     private ObjectMapper objectMapper;
 
@@ -24,7 +24,7 @@ public class MetricsResource {
     }
 
     @GET
-    @Path("metrics")
+    @Path(NAME)
     @Produces(APPLICATION_JSON)
     public Response metrics() throws Exception {
         String metrics = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(metricRegistry);
