@@ -9,7 +9,7 @@ Getting started
 
 Prerequisites: Java 1.6, ant
 
-1.  git clone --recursive _repo_url_
+1.  git clone _repo_url_
 2.  cd utterlyidle-metrics
 3.  ant (builds the app)
 4.  ant run (runs the app using a default port of 8181)
@@ -21,7 +21,7 @@ Building the project
 
 Prerequisites: Java 1.6, ant
 
-`ant -Dbuild.number=100 package`
+`ant -Dbuild.number=100 build`
 
 
 Usage
