@@ -103,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="1" selection-start="80" selection-end="80" vertical-scroll-proportion="0.20705521">
+            <state line="9" column="1" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,10 +139,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.dependencies" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="build.dependencies" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/build.dependencies">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="108" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+            <state line="5" column="85" selection-start="162" selection-end="162" vertical-scroll-proportion="0.115030676">
               <folding />
             </state>
           </provider>
@@ -152,7 +152,20 @@
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="34" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1371025709000" expanded="true" signature="1410:1640" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="1666:1802" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="1830:2292" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="1888:2278" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="2345:2396" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="2425:2708" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="2734:2832" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="2859:2896" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="2925:4468" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="3098:3149" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="3278:4220" placeholder="..." />
+                <marker date="1371025709000" expanded="true" signature="4341:4453" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -671,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/optional.dependencies">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="29" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
@@ -688,13 +694,40 @@
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="34" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1371025709000" expanded="true" signature="1410:1640" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="1666:1802" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="1830:2292" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="1888:2278" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="2345:2396" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="2425:2708" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="2734:2832" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="2859:2896" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="2925:4468" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="3098:3149" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="3278:4220" placeholder="..." />
+            <marker date="1371025709000" expanded="true" signature="4341:4453" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/macros.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="41" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="1" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/optional.dependencies">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -708,14 +741,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/build.dependencies">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="108" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="80" selection-end="80" vertical-scroll-proportion="0.20705521">
+        <state line="5" column="85" selection-start="162" selection-end="162" vertical-scroll-proportion="0.115030676">
           <folding />
         </state>
       </provider>
