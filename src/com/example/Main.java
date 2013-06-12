@@ -3,7 +3,7 @@ package com.example;
 import com.googlecode.utterlyidle.BasePath;
 import com.googlecode.utterlyidle.RestApplication;
 import com.utterlyidle.metrics.MetricsModule;
-import com.utterlyidle.metrics.jvm.gc.JvmModule;
+import com.utterlyidle.metrics.jvm.JvmModule;
 
 import static com.googlecode.utterlyidle.ApplicationBuilder.application;
 import static com.googlecode.utterlyidle.ServerConfiguration.defaultConfiguration;

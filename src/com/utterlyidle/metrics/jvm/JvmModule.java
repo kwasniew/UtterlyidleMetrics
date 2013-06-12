@@ -5,6 +5,7 @@ import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.MetricSet;
 import com.codahale.metrics.jvm.GarbageCollectorMetricSet;
 import com.codahale.metrics.jvm.MemoryUsageGaugeSet;
+import com.codahale.metrics.jvm.ThreadStatesGaugeSet;
 import com.googlecode.totallylazy.Callable2;
 import com.googlecode.totallylazy.Maps;
 import com.googlecode.utterlyidle.modules.ApplicationScopedModule;
@@ -17,8 +18,10 @@ public class JvmModule implements ApplicationScopedModule {
     public Container addPerApplicationObjects(Container container) throws Exception {
         container.add(GarbageCollectorMetricSet.class);
         container.add(MemoryUsageGaugeSet.class);
+        container.add(ThreadStatesGaugeSet.class);
         registerMetrics(container.get(MetricRegistry.class), container.get(GarbageCollectorMetricSet.class));
         registerMetrics(container.get(MetricRegistry.class), container.get(MemoryUsageGaugeSet.class));
+        registerMetrics(container.get(MetricRegistry.class), container.get(ThreadStatesGaugeSet.class));
         return container;
     }
 
