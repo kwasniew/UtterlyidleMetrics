@@ -12,7 +12,7 @@ Prerequisites: Java 1.6, ant
 1.  git clone _repo_url_
 2.  cd utterlyidle-metrics
 3.  ant (builds the app)
-4.  ant run (runs the app using a default port of 8181)
+4.  run main method from com.example.Main
 5.  Go to http://localhost:8181/metrics/admin
 
 
