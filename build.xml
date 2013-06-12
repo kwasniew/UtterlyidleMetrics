@@ -1,4 +1,4 @@
-<project name="UtterlyidleMetrics" default="build">
+<project name="utterlyidle-metrics" default="build">
     <property name="macros" value="${basedir}/macros"/>
 
     <import file="${macros}/build.xml"/>
