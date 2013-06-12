@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f559a2b3-bfb7-44bf-82ca-90864c24e69d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/macros.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/shavenmaven.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitmodules" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/environments/default.properties" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/dependencies/build.dependencies" afterPath="$PROJECT_DIR$/build/build.dependencies" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/dependencies/runtime.dependencies" afterPath="$PROJECT_DIR$/build/runtime.dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/build.properties" afterPath="" />
     </list>
     <ignored path="utterlyidle-metrics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -290,24 +282,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utterlyidle-metrics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utterlyidle-metrics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
