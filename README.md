@@ -1,7 +1,7 @@
 utterlyidle-metrics
 ================
 
-Utterlyidle module that adds metrics (https://github.com/codahale/metrics) support. 
+Utterlyidle module that adds plug and play metrics (https://github.com/codahale/metrics) support. 
 In particular it ports servlet related functionality (metric-servlet and metric-servlets modules) to Utterlyidle.
 
 Getting started
@@ -30,5 +30,12 @@ Usage
 Add utterlyidle-metrics jar and metrics runtime dependencies
 
 `application.add(new MetricsModule());`
+
+Default metrics
+--------
+/metrics/ping   
+/metrics/threads  -- thread dump  
+/metrics/healthcheck -- deadlock detection healthcheck; other custom healthchecks will be added here  
+/metrics/metrics -- core metrics: active requests counter, response code meters, requests timer  
 
 
