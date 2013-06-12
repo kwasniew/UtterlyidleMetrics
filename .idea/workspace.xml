@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f559a2b3-bfb7-44bf-82ca-90864c24e69d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/status.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/build.dependencies" afterPath="$PROJECT_DIR$/build/build.dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/macros.xml" afterPath="$PROJECT_DIR$/build/macros.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/runtime.dependencies" afterPath="$PROJECT_DIR$/build/runtime.dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f559a2b3-bfb7-44bf-82ca-90864c24e69d" name="Default" comment="" />
     <ignored path="utterlyidle-metrics.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="f559a2b3-bfb7-44bf-82ca-90864c24e69d" time="1371026900077" ignored="false" />
@@ -111,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="18" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+            <state line="9" column="1" selection-start="80" selection-end="80" vertical-scroll-proportion="0.20705521">
               <folding />
             </state>
           </provider>
@@ -147,10 +139,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.dependencies" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="build.dependencies" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/build.dependencies">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="52" selection-start="162" selection-end="162" vertical-scroll-proportion="0.115030676">
+            <state line="3" column="108" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -185,11 +177,11 @@
       <list>
         <option value="$PROJECT_DIR$/build/shavenmaven.xml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/build/macros.xml" />
         <option value="$PROJECT_DIR$/build/runtime.dependencies" />
         <option value="$PROJECT_DIR$/build/build.dependencies" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -693,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="34" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
@@ -723,7 +708,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/build.dependencies">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="162" selection-end="162" vertical-scroll-proportion="0.115030676">
+        <state line="3" column="108" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="1" selection-start="80" selection-end="80" vertical-scroll-proportion="0.20705521">
           <folding />
         </state>
       </provider>
