@@ -33,6 +33,7 @@ Add utterlyidle-metrics jar and metrics runtime dependencies
 
 Default metrics
 --------
+/metrics/admin -- aggregate of all metrics, healthchecks etc.  
 /metrics/ping   
 /metrics/threads  -- thread dump  
 /metrics/healthcheck -- deadlock detection healthcheck; other custom healthchecks will be added here  

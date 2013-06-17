@@ -8,14 +8,15 @@ import com.googlecode.totallylazy.Pair;
 import com.googlecode.utterlyidle.Status;
 import com.utterlyidle.metrics.MetricsModule;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import static com.codahale.metrics.MetricRegistry.name;
 import static com.googlecode.totallylazy.Sequences.sequence;
 
 public class StatusCodeMeters {
-    private Map<Integer, Meter> statusCodeMeters = new HashMap<Integer, Meter>();
+    private ConcurrentMap<Integer, Meter> statusCodeMeters = new ConcurrentHashMap<Integer, Meter>();
     private MetricRegistry metricRegistry;
     private Meter otherMeter;
 
