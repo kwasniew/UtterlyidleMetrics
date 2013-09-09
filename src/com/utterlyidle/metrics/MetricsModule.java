@@ -28,7 +28,7 @@ public class MetricsModule implements ApplicationScopedModule, RequestScopedModu
         container.add(MetricRegistry.class);
         container.add(RequestTimer.class);
         container.add(ActiveRequestsCounter.class);
-        container.addInstance(StatusCodes.class, StatusCodes.codes(OK, CREATED, NO_CONTENT, SEE_OTHER, NOT_FOUND, BAD_REQUEST, INTERNAL_SERVER_ERROR));
+        container.addInstance(StatusCodes.class, StatusCodes.codes(OK, CREATED, NO_CONTENT, SEE_OTHER, NOT_MODIFIED, NOT_FOUND, BAD_REQUEST, INTERNAL_SERVER_ERROR));
         container.add(StatusCodeMeters.class);
         container.add(MetricsObjectMapper.class);
 
