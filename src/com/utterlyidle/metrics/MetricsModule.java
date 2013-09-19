@@ -18,7 +18,6 @@ import com.utterlyidle.metrics.threadDump.ThreadDumpResource;
 
 import java.lang.management.ManagementFactory;
 
-import static com.googlecode.utterlyidle.Status.*;
 import static com.googlecode.utterlyidle.annotations.AnnotatedBindings.annotatedClass;
 
 public class MetricsModule implements ApplicationScopedModule, RequestScopedModule, ResourcesModule
@@ -28,7 +27,6 @@ public class MetricsModule implements ApplicationScopedModule, RequestScopedModu
         container.add(MetricRegistry.class);
         container.add(RequestTimer.class);
         container.add(ActiveRequestsCounter.class);
-        container.addInstance(StatusCodes.class, StatusCodes.codes(OK, CREATED, NO_CONTENT, SEE_OTHER, NOT_MODIFIED, NOT_FOUND, BAD_REQUEST, INTERNAL_SERVER_ERROR, BAD_GATEWAY));
         container.add(StatusCodeMeters.class);
         container.add(MetricsObjectMapper.class);
 
